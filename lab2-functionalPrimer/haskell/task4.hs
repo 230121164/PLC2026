@@ -1,17 +1,17 @@
 ask :: String -> IO ()
 ask prompt =
-  do
-  putStrLn prompt
-  line <- getLine
-  if line == ""
-    then ask (prompt ++ "!") --append ! to prompr each time empty string entered
-    else if (line == "quit") then putStrLn("quitting...") --condition added for quitting
+ do
+ putStrLn prompt
+ line <- getLine
+ if line == ""
+    then ask (prompt ++ "!") --append ! to prompt each time empty string entered
+    else if (line == "quit") then putStrLn("quitting..")
     else do
        putStrLn ("you said: " ++ reverse line)
-       ask prompt --needed for repeated inputs
-
+       ask prompt
+ 
 main :: IO ()
 main =
-  do
-  let prompt = "please say something"
-  ask prompt
+ do
+ let prompt = "please say something"
+ ask prompt
