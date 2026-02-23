@@ -22,7 +22,7 @@ data Item
             item_performer :: Person,
             item_length_secs :: Float
         }
-        
+        |
         Pause 
         {
             item_length_secs :: Float
@@ -51,13 +51,13 @@ piece2 =
         item_length_secs = 16*60+49
     }
   
-{  
+
 pause1 =
     Pause
     { 
         item_length_secs = 5
     }
-}
+
 
 main =
     do
